@@ -17,7 +17,7 @@ a {
 
 .container {
   height: 100%;
-  padding: 0 15%;
+  padding: 0 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +74,61 @@ height: 100px;
   padding-left: 20px;
 }
 
+/* CSS JUMBO */
 
+.jumbotron {
+  display: flex;
+  padding: 0 10%;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.jumbo-left , .jumbo-right {
+  width: 50%;
+}
+.jumbo-left {
+  padding-left: 20px;
+}
+.jumbo-right {
+  padding-left: 50px;
+  text-align: center;
+}
+.jumbo-left h1 {
+  font-size: 76px;
+  line-height: 87px;
+  margin-bottom: 2.5rem;
+}
+.jumbo-left p {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgb(139, 149, 158);
+  margin-bottom: 2rem;
+}
+.jumbo-left form {
+  margin-bottom: 2rem;
+}
+
+.jumbo-left form select, .jumbo-left form input{
+  padding: 0.5rem 1.5rem 0.3rem 0px;
+  margin-right: 0.5rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgb(139, 149, 158);
+  font-size: 1rem;
+  vertical-align: middle;
+  background-color: #fff;
+}
+ select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+#jumbo-img {
+  width: 500px;
+}
 
 
 .button {
@@ -83,4 +137,14 @@ height: 100px;
   font-weight: bold;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
+}
+
+.jumbotron .button {
+    width: 8.625rem;
+    height: 3.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0px;
+    font-size: 1.25rem;
+    z-index: 1;
+    border: none;
 }
