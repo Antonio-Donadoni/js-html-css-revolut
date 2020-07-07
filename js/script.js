@@ -1,34 +1,31 @@
 $(document).ready(function(){
 
   $("nav .dropdown-parent").mouseenter(function(){
-    $(this).children(".dropdown").css("display", "block");
-    $(this).children("a").css("color", "black");
+    $(this).children(".dropdown").fadeIn();
+    $(this).children("a").addClass("hover");
   });
 
   $("nav .dropdown-parent").mouseleave(function(){
-    $(this).children(".dropdown").css("display", "none");
-    $(this).children("a").css("color", "#555");
+    $(this).children(".dropdown").fadeOut();
+    $(this).children("a").removeClass("hover");
   });
 
-  $(".fa-bars").click(function(){
-    $(".hamburger-menu").addClass("active");
+  $(".menu-toggle").click(function(){
+    $(".hamburger-menu").toggleClass("active");
+    $(this).children("i").toggle();
   });
 
-  $(".fa-times").click(function(){
-    $(".hamburger-menu").removeClass("active");
+
+  $(".hamburger-menu .dropdown-parent").click(function(){
+    $(this).children(".dropdown-click").slideToggle();
+    $(this).children("a").toggleClass("hover");
   });
 
-  var active = false
-    $(".hamburger-menu .dropdown-parent").click(function(){
-      if (active) {
-        $(this).children(".dropdown-click").slideUp();
-        $(this).children("a").css("color", "#555");
-        active = false;
-      }
-      else {
-      $(this).children(".dropdown-click").slideDown();
-      $(this).children("a").css("color", "black");
-      active = true;
-      }
-    });
+  $(".dropdown-click a, .dropdown a").mouseenter(function(){
+    $(this).addClass("hover");
+  });
+
+  $(".dropdown-click a, .dropdown a").mouseleave(function(){
+    $(this).removeClass("hover");
+  });
 });
