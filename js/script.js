@@ -12,12 +12,10 @@ $(document).ready(function(){
 
   $(".fa-bars").click(function(){
     $(".hamburger-menu").addClass("active");
-
   });
 
   $(".fa-times").click(function(){
     $(".hamburger-menu").removeClass("active");
-
   });
 
   var active = false
@@ -33,5 +31,4 @@ $(document).ready(function(){
       active = true;
       }
     });
-
 });
