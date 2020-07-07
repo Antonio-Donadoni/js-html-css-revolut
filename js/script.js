@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
   $("nav .dropdown-parent").mouseenter(function(){
-    $(this).children(".dropdown").fadeIn();
+    $(this).children(".dropdown").show();
     $(this).children("a").addClass("hover");
   });
 
   $("nav .dropdown-parent").mouseleave(function(){
-    $(this).children(".dropdown").fadeOut();
+    $(this).children(".dropdown").hide();
     $(this).children("a").removeClass("hover");
   });
 
